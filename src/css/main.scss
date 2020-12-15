@@ -1,7 +1,10 @@
-body {
-  background-color: gray;
-}
+@import "mixins/normalize";
+@import "mixins/base";
 
-h1 {
-  color: darkblue;
-}
+@import "mixins/icons";
+@import "mixins/fonts";
+@import "mixins/mixin";
+
+//pages
+
+@import "uikit-page/uikit-page";

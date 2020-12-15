@@ -14,7 +14,7 @@ const
     dist = "dist",
     src = "src";
 
-gulp.task('serve', function() {
+gulp.task('serve', () => {
 
     browserSync.init({
         server: "./"+dist
@@ -25,10 +25,10 @@ gulp.task('serve', function() {
     gulp.watch(src+"/js/**/*.js", gulp.series('js'));
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', () => {
     return gulp.src(src+"/css/main.scss")
-        .pipe(sass())
         .pipe(sourcemaps.init())
+        .pipe(sass())
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(sourcemaps.write())
         .pipe(rename({ suffix: '.min' }))
@@ -36,15 +36,15 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('pug', function() {
-    return gulp.src(src+"/html/index.pug")
+gulp.task('pug', () => {
+    return gulp.src(src+"/html/*.pug")
         .pipe(plumber())
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(dist))
         .pipe(browserSync.stream());
 });
 
-gulp.task('js', function () {
+gulp.task('js', () => {
     return gulp.src(src+"/js/main.js")
         .pipe(sourcemaps.init())
         .pipe(babel({
@@ -57,14 +57,19 @@ gulp.task('js', function () {
         .pipe(browserSync.stream());
 })
 
-gulp.task('images', function () {
+gulp.task('images', () => {
     return gulp.src(src+'/images/**/*')
         .pipe(gulp.dest(dist+'/images/'));
 });
+
+gulp.task('fonts', () => {
+    return gulp.src(src+'/fonts/**/*')
+        .pipe(gulp.dest(dist+'/fonts/'));
+})
 
 gulp.task('remove-dist', (done) => {
     rimraf.sync(dist);
     done();
 })
 
-gulp.task('default', gulp.series("remove-dist", "sass", "pug", "js", "images", "serve"));
+gulp.task('default', gulp.series("remove-dist", "sass", "pug", "js", "images", "fonts", "serve"));

@@ -1,0 +1,20 @@
+.uikit-page__content
+    .uikit-page__row
+        .uikit-page__column
+            +button(false, 'uikit-page__button', 'default')
+            +button(false, 'uikit-page__button clicked', 'clicked')
+            +button(false, 'uikit-page__button', 'deisabled', true)
+        .uikit-page__column
+            +button(true, 'uikit-page__button', 'default')
+            +button(true, 'uikit-page__button clicked', 'clicked')
+            +button(true, 'uikit-page__button', 'deisabled', true)
+        .uikit-page__column
+            +input('uikit-page__input', 'email', 'example@gmail.com')
+            +input('uikit-page__input', 'enter ur password', 'password', true)
+            +input('uikit-page__input', 'enter ur password', 'password', true, true)
+        .uikit-page__column
+            +input('uikit-page__input', 'email', 'example@gmail.com', false, false, true)
+            +input('uikit-page__input', 'enter ur password', 'password', true, false, true)
+        .uikit-page__column
+            +checkbox('uikit-page__checkbox', 'r u gay?', 'uikit-checkbox-1', false)
+            +checkbox('uikit-page__checkbox', 'r u slave?', 'uikit-checkbox-2', true)

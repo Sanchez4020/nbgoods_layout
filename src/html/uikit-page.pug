@@ -1,0 +1,12 @@
+doctype html
+html(lang="ru")
+    head
+        include mixin/meta
+        title UIKIT PAGE
+        include mixin/styles
+    body.uikit-page
+        include mixin/mixin
+        main
+            .wrapper
+                include uikit-page/uikit-page
+        script(src="./js/main.min.js" defer)
