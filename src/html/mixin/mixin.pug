@@ -28,3 +28,11 @@ mixin checkbox(custom_class, custom_label, id, checked)
             class= checked ? 'checked': ''
         )= custom_label
             .icon-check
+
+mixin defaultList(custom_class, inverted, listItems)
+    .default-list(class= custom_class, class= inverted ? 'default-list--inverted':'')
+        h6.default-list__title= listItems.title
+        ul
+            each item in listItems.list
+                li.link.default-list__link
+                    a(href= item.url)= item.name

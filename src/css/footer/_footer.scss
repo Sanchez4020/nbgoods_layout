@@ -1,0 +1,60 @@
+footer{
+  margin-top: auto;
+  width: 100vw;
+  background-color: $color_Black;
+  color: white;
+  .footer{
+    display: flex;
+    padding: 118px 135px;
+
+    &__row{
+      display: flex;
+      flex-direction: column;
+      margin-right: 110px;
+      &--first{
+        margin-right: 146px;
+      }
+      &:last-of-type{
+        margin-right: 0;
+      }
+      &-item{
+        .default-list{
+          &__link{
+            margin-bottom: 6px;
+            &:last-of-type{
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &__title{
+      font-family: $font_1;
+      font-size: 18px;
+      line-height: 29px;
+      margin-bottom: 21px;
+    }
+
+    &__copyright{
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 23px;
+    }
+
+    &__app{
+      width: 116px;
+      height: 35px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      &--google{
+        background-image: url('/images/google.png');
+        margin-bottom: 9px;
+      }
+      &--apple{
+        background-image: url("/images/apple.png");
+      }
+    }
+  }
+}

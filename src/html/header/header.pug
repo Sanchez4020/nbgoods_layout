@@ -1,0 +1,27 @@
+- var menuItems = ['Мужское','Женское','Детское','Новые Поступления','Бренды','Обусь','Аксессуары','Бижутерия','SALE',]
+- var submenuItems = {title:'Одежда',list: [{name:'Одежда', link:'#'},{name:'Одежда', link:'#'},{name:'Одежда', link:'#'},{name:'Одежда', link:'#'}]}
+
+header
+    .wrapper
+        .header
+            .header__row
+                .header__logo NotBadGoods
+                .header__search
+                    input.header__search-input(type='text', placeholder="Искать")
+                    .header__search-icon.icon-search
+                .header__actions
+                    .header__actions-item.icon-cart
+                    .header__actions-item.icon-fav
+                    .header__actions-item.icon-user
+            .header__row
+                .header__categories
+                    each item in menuItems
+                        .header__link.link= item
+                    .header__submenu
+                        .wrapper
+                            .header__submenu-content
+                                +defaultList('header__submenu-item', false, submenuItems)
+                                +defaultList('header__submenu-item', false, submenuItems)
+                                +defaultList('header__submenu-item', false, submenuItems)
+                                +defaultList('header__submenu-item', false, submenuItems)
+                +button(false, 'header__sale-button', 'Продать товар')

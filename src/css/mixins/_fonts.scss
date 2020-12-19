@@ -11,6 +11,14 @@
 }
 
 @font-face {
+  font-family: 'Brygada 1918';
+  src: url('/fonts/brygada/Brygada1918-Bold.otf');
+  src: url('/fonts/brygada/Brygada1918-Bold.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Helvetica Nue';
   src: url('/fonts/helvetica/HelveticaNeue.ttf');
   src: url('/fonts/helvetica/HelveticaNeue.ttf')  format('truetype');

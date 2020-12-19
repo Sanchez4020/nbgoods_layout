@@ -10,7 +10,7 @@ $color_Silver: #cac9c9;
 $color_GraySuit: #D0C9D6;
 
 $font_1: 'Brygada 1918';
-$font_2: 'Helvetica Nue';
+$font_2: 'Roboto';
 
 *,
 *::before,
@@ -21,11 +21,14 @@ $font_2: 'Helvetica Nue';
 
 body{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   font-size: 16px;
   line-height: 18px;
   color: $color_Black;
   font-family: $font_2;
+  position: relative;
+  min-height: 100vh;
 }
 
 main{
@@ -58,6 +61,14 @@ textarea{
   &:focus{
     outline: none;
   }
+}
+
+ul,
+li{
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 

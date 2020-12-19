@@ -1,0 +1,18 @@
+- var firstColumn = {title:'Покупка',list: [{name:'Отслеживание заказа', link:'#'},{name:'Гарантия подлинности', link:'#'},{name:'Возврат', link:'#'},{name:'Оплата', link:'#'},{name:'Доставка', link:'#'}]}
+- var secondColumn = {title:'Продажа',list: [{name:'Правила поддержки', link:'#'},{name:'Как продать?', link:'#'},{name:'Контакты', link:'#'}]}
+- var thirdColumn = {title:'Помощь',list: [{name:'FAQ', link:'#'},{name:'Публичная оферта', link:'#'},{name:'Пользовательское соглашение', link:'#'},{name:'Партнерская программа', link:'#'},{name:'Политика конфиденциальности', link:'#'}]}
+
+footer
+    .wrapper
+        .footer
+            .footer__row.footer__row--first
+                .footer__title Second Hand Online
+                .footer__copyright &copy; 2020-2021
+                a(href='#').footer__app.footer__app--google
+                a(href='#').footer__app.footer__app--apple
+            .footer__row
+                +defaultList('footer__row-item', true, firstColumn)
+            .footer__row
+                +defaultList('footer__row-item', true, secondColumn)
+            .footer__row
+                +defaultList('footer__row-item', true, thirdColumn)

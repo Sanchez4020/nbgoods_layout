@@ -23,6 +23,8 @@ gulp.task('serve', () => {
     gulp.watch(src+"/css/**/*.scss", gulp.series('sass'));
     gulp.watch(src+"/html/**/*.pug", gulp.series('pug'));
     gulp.watch(src+"/js/**/*.js", gulp.series('js'));
+    gulp.watch(src+"/fonts/**/*", gulp.series('fonts'));
+    gulp.watch(src+"/images/**/*", gulp.series('images'));
 });
 
 gulp.task('sass', () => {

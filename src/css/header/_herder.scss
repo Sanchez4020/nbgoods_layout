@@ -1,0 +1,104 @@
+header{
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 99;
+  height: 129px;
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    padding: 21px 40px 4px;
+
+    &__row{
+      display: flex;
+      &:first-child{
+        margin-bottom: 35px;
+      }
+    }
+
+    &__logo{
+      font-family: $font_1;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 34px;
+      margin-right: 144px;
+    }
+
+    &__search{
+      position: relative;
+      height: 34px;
+      display: flex;
+      &-input{
+        margin-top: auto;
+        padding: 7px 15px;
+        width: 526px;
+        border: 0 none;
+        border-bottom: 1px solid black;
+        font-size: 16px;
+        line-height: 16px;
+      }
+      &-icon{
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 16px;
+        &:before{
+          transition: content .3s;
+        }
+      }
+    }
+
+    &__actions{
+      margin-left: auto;
+      display: flex;
+      &-item{
+        font-size: 24px;
+        margin-right: 35px;
+        cursor: pointer;
+        &:last-of-type{
+          margin-right: 0;
+        }
+        &:hover{
+          color: $color_MineShaft;
+        }
+      }
+    }
+
+    &__categories{
+      display: flex;
+      height: min-content;
+      margin-top: auto;
+    }
+
+    &__submenu{
+      position: fixed;
+      top: 129px;
+      left: 0;
+      z-index: 99;
+      max-height: 0px;
+      transition: max-height 2s;
+      overflow: hidden;
+      width: 100vw;
+      background-color: white;
+      &-content{
+        padding: 40px 42px;
+        display: flex;
+      }
+      &-item{
+        margin-right: 175px;
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__sale-button{
+      margin-left: auto;
+      font-size: 14px;
+      padding: 11px 19px;
+    }
+  }
+}
