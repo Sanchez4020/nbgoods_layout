@@ -71,6 +71,11 @@ header{
       display: flex;
       height: min-content;
       margin-top: auto;
+      &.show-submenu{
+        .header__submenu{
+          max-height: 400px;
+        }
+      }
     }
 
     &__submenu{
@@ -86,6 +91,14 @@ header{
       &-content{
         padding: 40px 42px;
         display: flex;
+        position: relative;
+        .close-btn{
+          position: absolute;
+          right: 42px;
+          top: 40px;
+          font-size: 16px;
+          cursor: pointer;
+        }
       }
       &-item{
         margin-right: 175px;

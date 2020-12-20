@@ -19,6 +19,9 @@ footer{
       }
       &-item{
         .default-list{
+          &__title{
+            padding-left: 6px;
+          }
           &__link{
             margin-bottom: 6px;
             &:last-of-type{

@@ -36,3 +36,41 @@ mixin defaultList(custom_class, inverted, listItems)
             each item in listItems.list
                 li.link.default-list__link
                     a(href= item.url)= item.name
+
+mixin select(custom_class, options)
+    .select
+        select.select__item
+            each option in options
+                option.select__option= option
+        .select__icon.icon-dd-arrow
+
+mixin radioColor(custom_class, color, name, id, checked)
+    .radio-color(class= custom_class)
+        input.radio-color__input(type='radio', id= id, name= name, checked= checked)
+        label.radio-color__label(
+            for= id,
+            class='_js-'+name
+        )
+            .radio-color__round(
+                style='background-color: '+color,
+                class= checked ? 'checked': '',
+                class= color === '#fff' ? 'white-color': ''
+                )
+
+mixin radioSize(custom_class, size, name, id, checked)
+    .radio-size(class= custom_class)
+        input.radio-size__input(type='radio', id= id, name= name, checked= checked)
+        label.radio-size__label(
+            for= id,
+            class='_js-'+name
+        )
+            .radio-size__item(
+                class= checked ? 'checked': ''
+            )= size
+
+mixin buttonCustomized(custom_class, icon_class, text, counter)
+    .button-customized(class= custom_class)
+        .button-customized__icon(class= icon_class)
+        .button-customized__text= text
+        if counter
+            .button-customized__counter= counter

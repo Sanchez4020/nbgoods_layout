@@ -47,7 +47,7 @@ gulp.task('pug', () => {
 });
 
 gulp.task('js', () => {
-    return gulp.src(src+"/js/main.js")
+    return gulp.src(src+"/js/**/*.js")
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']

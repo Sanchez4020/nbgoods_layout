@@ -18,5 +18,18 @@ document.addEventListener('DOMContentLoaded', () => {
             label.classList.toggle('checked');
             console.log(input.checked);
         })
-    })
+    });
+
+    const initRadio = (name) => {
+        const radioButtons = document.querySelectorAll('._js-'+name);
+        radioButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                radioButtons.forEach(btn => btn.querySelector('div').classList.remove('checked'));
+                btn.querySelector('div').classList.add('checked');
+            })
+        })
+    };
+
+    initRadio('test-color');
+    initRadio('test-size');
 });
