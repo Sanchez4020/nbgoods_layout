@@ -74,3 +74,20 @@ mixin buttonCustomized(custom_class, icon_class, text, counter)
         .button-customized__text= text
         if counter
             .button-customized__counter= counter
+
+mixin listingItem(custom_class, user_status, status_icon, likes, image, brand, type, size, delivery, price)
+    - var size_string = 'Размер: '+size
+    - var price_string = price+' ₽'
+    .listing-item(class= custom_class)
+        .listing-item__header
+            .listing-item__status= user_status
+                .listing-item__status-icon(class=status_icon)
+            .listing-item__likes
+                .listing-item__likes-count= likes
+                .listing-item__likes-icon.icon-fav
+        img.listing-item__image(src=image)
+        .listing-item__desc.listing-item__brand= brand
+        .listing-item__desc.listing-item__type= type
+        .listing-item__desc.listing-item__size= size_string
+        .listing-item__desc.listing-item__delivery= delivery
+        .listing-item__desc.listing-item__price= price_string

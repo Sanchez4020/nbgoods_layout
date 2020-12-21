@@ -278,3 +278,72 @@
     margin-left: 5px;
   }
 }
+
+.listing-item{
+  width: 321px;
+  height: 471px;
+  padding: 22px;
+  border-radius: 10px;
+  transition: .3s;
+  &:hover{
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__status{
+    position: relative;
+    width: 95px;
+    font-size: 16px;
+    &-icon{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__likes{
+    display: flex;
+    cursor: pointer;
+    &-count{
+      font-size: 16px;
+      line-height: 24px;
+      margin-right: 7px;
+    }
+    &-icon{
+      font-size: 24px;
+      transition: color .3s;
+    }
+    &:hover{
+      .listing-item__likes-icon{
+        color: $color_Crimson;
+      }
+    }
+  }
+
+  &__image{
+    display: flex;
+    margin: 0 auto;
+    width: 221px;
+    height: 221px;
+  }
+
+  &__desc{
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__brand,
+  &__price{
+    font-weight: 700;
+  }
+
+  &__brand,
+  &__type{
+    cursor: pointer;
+  }
+}
