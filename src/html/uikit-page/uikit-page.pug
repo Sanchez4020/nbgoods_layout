@@ -1,4 +1,5 @@
 - var selectOptions = ['Популярость', 'Возрастание цены', 'Убывание цены', 'КРЫМ НАШ!!1']
+- var navigation = ['Адрес Доставки', 'Доставка', 'Оплата']
 
 .uikit-page__content
     .uikit-page__row
@@ -22,8 +23,8 @@
             +checkbox('uikit-page__checkbox', 'r u slave?', 'uikit-checkbox-2', true)
             +select('uikit-page__select',selectOptions)
         .uikit-page__column
-            .link Мужское
-            .link.active Женское
+            .uikit-page__link.link Мужское
+            .uikit-page__link.link.active Женское
             +radioColor('uikit-page__radio', '#aaa', 'test-color', 'color1', true)
             +radioColor('uikit-page__radio', '#ea1313', 'test-color', 'color2')
             +radioColor('uikit-page__radio', '#fff', 'test-color', 'color3')
@@ -35,3 +36,11 @@
             +buttonCustomized('uikit-page__customized-btn', 'icon-share', 'Поделиться')
         .uikit-page__column
             +listingItem('uikit-page__listing-item', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+            +listingItem('uikit-page__listing-item', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+        .uikit-page__column
+            +customNavigation('uikit-page__custom-nav', navigation)
+            +customNavigation('uikit-page__custom-nav', navigation, true)
+        .uikit-page__column
+            .uikit-page__tooltip.tooltip-parent Hover on me
+                +tooltip('', 'This is tooltip')
+            .uikit-page__open-modal.link.open-modal(target-id='test-modal') Click on me

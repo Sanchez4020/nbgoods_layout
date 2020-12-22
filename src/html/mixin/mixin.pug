@@ -86,8 +86,19 @@ mixin listingItem(custom_class, user_status, status_icon, likes, image, brand, t
                 .listing-item__likes-count= likes
                 .listing-item__likes-icon.icon-fav
         img.listing-item__image(src=image)
-        .listing-item__desc.listing-item__brand= brand
-        .listing-item__desc.listing-item__type= type
+        .listing-item__brand.link= brand
+        .listing-item__type.link= type
         .listing-item__desc.listing-item__size= size_string
         .listing-item__desc.listing-item__delivery= delivery
         .listing-item__desc.listing-item__price= price_string
+
+mixin customNavigation(custom_class, nav_items, vertical)
+    .custom-navigation(class= custom_class, class= vertical ? 'custom-navigation--vertical': '')
+        each value, index in nav_items
+            .custom-navigation__item(class= index === 0 ? 'active': '')
+                .custom-navigation__count= index+1
+                .custom-navigation__name= value
+
+mixin tooltip(custom_class, text)
+    .tooltip(class= custom_class)
+        .tooltip__item= text

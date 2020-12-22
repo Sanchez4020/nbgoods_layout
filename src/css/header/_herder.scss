@@ -3,7 +3,7 @@ header{
   top: 0;
   background-color: white;
   z-index: 99;
-  height: 129px;
+  height: 134px;
 
   .header{
     display: flex;
@@ -80,7 +80,7 @@ header{
 
     &__submenu{
       position: fixed;
-      top: 129px;
+      top: 134px;
       left: 0;
       z-index: 99;
       max-height: 0px;

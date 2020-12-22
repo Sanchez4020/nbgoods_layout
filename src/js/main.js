@@ -32,4 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initRadio('test-color');
     initRadio('test-size');
+
+    const
+            customNav = document.querySelectorAll('.custom-navigation'),
+            customNavFunc = (nav) => {
+                const items = nav.querySelectorAll('.custom-navigation__item');
+                items.forEach(item => {
+                    item.addEventListener('click', () => {
+                        if (item.classList.contains('active')) {
+                            return;
+                        } else {
+                            items.forEach(item => item.classList.remove('active'));
+                            item.classList.add('active');
+                        }
+                    })
+                })
+            };
+    if (customNav) {
+        customNav.forEach(nav => customNavFunc(nav));
+    }
 });

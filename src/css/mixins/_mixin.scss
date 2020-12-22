@@ -121,7 +121,7 @@
   color: $color_Black;
   transition: underline .3s;
   cursor: pointer;
-  padding: 5px 6px;
+  padding: 5px 3px;
   width: min-content;
   height: min-content;
   white-space: nowrap;
@@ -129,8 +129,9 @@
     position: absolute;
     content: '';
     bottom: 0;
+    left: 0;
     height: 1px;
-    width: 90%;
+    width: 100%;
     background-color: black;
     left: 50%;
     transform: translateX(-50%);
@@ -335,6 +336,7 @@
   &__desc{
     font-size: 16px;
     line-height: 26px;
+    padding: 0 3px;
   }
 
   &__brand,
@@ -344,6 +346,108 @@
 
   &__brand,
   &__type{
+  }
+}
+
+.custom-navigation{
+  display: flex;
+  flex-direction: row;
+  height: 53px;
+  &__item{
     cursor: pointer;
+    position: relative;
+    margin-right: 141px;
+    &:after{
+      position: absolute;
+      content: '';
+      width: 141px;
+      height: 1px;
+      background-color: $color_Black;
+      top: 11px;
+      left: 24px;
+    }
+    &.active,
+    &:hover{
+      .custom-navigation__count{
+        background-color: $color_Black;
+        color: white;
+      }
+    }
+    &:last-of-type{
+      margin-right: 0px;
+      &:after{
+        display: none;
+      }
+    }
+  }
+  &__count{
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+    border-radius: 50%;
+    border: 1px solid $color_Black;
+    background-color: white;
+    color: $color_Black;
+    transition: color .3s, background-color .3s;
+  }
+  &__name{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  &--vertical{
+    flex-direction: column;
+    height: unset;
+    .custom-navigation{
+      &__item{
+        margin-right: 0px;
+        margin-bottom: 60px;
+        display: flex;
+        &:after{
+          top: 24px;
+          left: 11px;
+          width: 1px;
+          height: 60px;
+        }
+      }
+      &__count{
+        margin-right: 10px;
+      }
+      &__name{
+        position: unset;
+        left: unset;
+        transform: unset;
+      }
+    }
+  }
+}
+
+.tooltip{
+  position: absolute;
+  max-height: 0px;
+  overflow: hidden;
+  color: $color_Black;
+  transition: max-height .3s;
+  z-index: 99;
+  background-color: white;
+  &__item{
+    padding: 3px 5px;
+    border: 1px solid $color_Black;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &-parent{
+    cursor: pointer;
+    &:hover{
+      .tooltip{
+        max-height: 50px;
+      }
+    }
   }
 }
