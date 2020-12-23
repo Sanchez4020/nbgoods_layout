@@ -102,3 +102,17 @@ mixin customNavigation(custom_class, nav_items, vertical)
 mixin tooltip(custom_class, text)
     .tooltip(class= custom_class)
         .tooltip__item= text
+
+mixin userAvatar(custom_class, image)
+    .user-avatar(class= custom_class)
+        img.user-avatar__img(src=image)
+        .user-avatar__overlay
+        .user-avatar__btn Изменить
+
+mixin promoCircle(custom_class,content, link, img)
+    .promo-circle(class= custom_class, class= img ? 'promo-circle--image': '')
+        if (img)
+            img.promo-circle__content(src= content)
+        else
+            .promo-circle__content= content
+        a.promo-circle__link(href= link ? link:'#')

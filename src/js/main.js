@@ -51,4 +51,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (customNav) {
         customNav.forEach(nav => customNavFunc(nav));
     }
+
+    const customScrollElements = document.querySelectorAll('.js-custom-scrollbar');
+
+    customScrollElements.forEach(elem => {
+            console.log(elem);
+            OverlayScrollbars(elem, {
+                overflowBehavior: {
+                    x: 'hidden',
+                    y: 'scroll'
+                },
+                scrollbars: {
+                    autoHide: "never"
+                }
+            })
+        }
+    )
+
+    $('.paginator').pagination({
+        items: 20,
+        itemsOnPage: 1,
+        prevText: '<',
+        nextText: '>',
+        edges: 1,
+        displayedPages: 3,
+    })
 });

@@ -49,4 +49,13 @@
     font-size: 30px;
     text-transform: capitalize;
   }
+
+  &__lisitng-block{
+    width: 300px;
+    height: 150px;
+  }
+
+  &__paginator{
+    margin-bottom: 30px;
+  }
 }
