@@ -1,0 +1,176 @@
+.auth-page{
+  &__header{
+    background-color: $color_Black;
+    width: 100vw;
+    height: 117px;
+    .wrapper{
+      display: flex;
+      height: 100%;
+    }
+    &-title{
+      font-size: 24px;
+      line-height: 28px;
+      font-family: $font_1;
+      font-weight: 500;
+      color: white;
+      margin: auto;
+      font-style: normal;
+      padding-top: 8px;
+      text-align: center;
+    }
+  }
+
+  &__content{
+    margin: 138px 0 124px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-separator{
+      width: 1px;
+      background-color: $color_Black;
+      @include tablet{
+        display: none;
+      }
+    }
+
+  }
+
+  &__switcher{
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 34px;
+    font-family: $font_1;
+    .login-btn{
+      text-decoration: underline;
+    }
+    .sign-in-btn{
+      text-decoration: none;
+    }
+    &-separator{
+      margin: 0 10px
+    }
+    &:hover{
+      .login-btn{
+        text-decoration: none;
+      }
+      .sign-in-btn{
+        text-decoration: underline;
+      }
+    }
+
+    &.active{
+      .login-btn{
+        text-decoration: none;
+      }
+      .sign-in-btn{
+        text-decoration: underline;
+      }
+      &:hover{
+        .login-btn{
+          text-decoration: underline;
+        }
+        .sign-in-btn{
+          text-decoration: none;
+        }
+      }
+    }
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__block{
+    display: flex;
+    flex-direction: column;
+    max-width: 437px;
+    width: 100%;
+    &-content{
+      opacity: 1;
+    }
+    &--login{
+      margin-right: 80px;
+      @include lil-screen {
+        margin-right: 30px;
+        @include tablet {
+          margin-right: 0;
+        }
+      }
+    }
+    &--sign-in{
+      margin-left: 80px;
+      @include lil-screen {
+        margin-left: 30px;
+        @include tablet {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__subtitle{
+    font-size: 28px;
+    line-height: 34px;
+    font-family: $font_1;
+    font-weight: 300;
+    margin-bottom: 35px;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__input{
+    width: 100%;
+    margin-bottom: 16px;
+    &--login{
+      margin-bottom: 23px;
+    }
+    &--sign-in{
+      margin-bottom: 30px;
+    }
+  }
+
+  &__forgot{
+    line-height: 24px;
+    font-size: 12px;
+  }
+
+  &__btn{
+    font-size: 14px;
+    &--login{
+      margin-top: 23px;
+      width: 155px;
+    }
+    &--sign-in{
+      width: 184px;
+    }
+  }
+
+}
+
+@include tablet {
+  .auth-page{
+    &__content{
+      .auth-page__block--login{
+        display: none;
+      }
+      .auth-page__block--sign-in{
+        display: flex;
+      }
+      &.login {
+        .auth-page__block--login{
+          display: flex;
+        }
+        .auth-page__block--sign-in{
+          display: none;
+        }
+      }
+    }
+
+  }
+}

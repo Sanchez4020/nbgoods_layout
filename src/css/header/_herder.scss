@@ -78,6 +78,13 @@ header{
       }
     }
 
+    &__link{
+      margin-right: 15px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+
     &__submenu{
       position: fixed;
       top: 134px;

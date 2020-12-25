@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru")
+    head
+        include mixin/meta
+        title AUTH PAGE
+        include mixin/styles
+    body.auth-page
+        include mixin/mixin
+        include header/header
+        main
+            .auth-page__header
+                .wrapper
+                    h1.auth-page__header-title Добро пожаловать в NotBadGoods
+            .wrapper
+                include auth/auth-page
+        include footer/footer
+        include mixin/modals
+        include mixin/scripts
+        script(src="/js/auth.min.js" defer)

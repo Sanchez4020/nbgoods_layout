@@ -1,23 +1,32 @@
-mixin button(transparent, custom_class, text, disabled)
-    .button(
-        class= transparent ? 'button--transparent': '',
-        class= custom_class,
-        class= disabled ? 'disabled': ''
+mixin button(transparent, custom_class, text, disabled, type)
+    if(!type)
+        .button(
+            class= transparent ? 'button--transparent': '',
+            class= custom_class,
+            class= disabled ? 'disabled': ''
+            )= text
+    else
+        button.button(
+            class= transparent ? 'button--transparent': '',
+            class= custom_class,
+            class= disabled ? 'disabled' : '',
+            type= type
         )= text
 
-mixin input(custom_class, title, placeholder, pass, disabled, error)
+mixin input(custom_class, title, placeholder, type, disabled, error, name)
     .input(
         class= custom_class,
         class= error ? 'error': '',
-        class= pass ? 'input--password': ''
+        class= type === 'password' ? 'input--password': ''
     )
         .input__title= title
         input.input__item(
             placeholder= placeholder,
             disabled= disabled,
-            type= pass ? 'password': 'text'
+            type= type,
+            name= name
         )
-        if(pass)
+        if(type === 'password')
             .input__icon.icon-eye
 
 mixin checkbox(custom_class, custom_label, id, checked)

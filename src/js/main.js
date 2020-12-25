@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const customScrollElements = document.querySelectorAll('.js-custom-scrollbar');
 
     customScrollElements.forEach(elem => {
-            console.log(elem);
             OverlayScrollbars(elem, {
                 overflowBehavior: {
                     x: 'hidden',
