@@ -1,0 +1,21 @@
+.auth-page__content.login
+    .auth-page__switcher
+        .login-btn Вход
+        .auth-page__switcher-separator /
+        .sign-in-btn Регистрация
+    form.auth-page__block.auth-page__block--login
+        h2.auth-page__subtitle Вход
+        .auth-page__block-content
+            +input('auth-page__input', 'Email', 'example@test.com', 'email', false, false, 'login-mail')
+            +input('auth-page__input auth-page__input--login', 'Пароль', 'password', 'password', false, false, 'login-pass')
+            a.auth-page__forgot.default-link(href='#') Забыли пароль?
+            +button(false, 'auth-page__btn auth-page__btn--login', 'Войти', false, 'submit')
+    .auth-page__content-separator
+    fotm.auth-page__block.auth-page__block--sign-in
+        h2.auth-page__subtitle Регистрация
+        .auth-page__block-content
+            +input('auth-page__input', 'Email', 'example@test.com', 'email', false, false, 'sign-in-mail')
+            +input('auth-page__input', 'Пароль', 'password', 'password', false, false, 'sign-in-pass')
+            +input('auth-page__input', 'Повторите пароль', 'password', 'password', false, false, 'sign-in-pass-confirm')
+            +input('auth-page__input auth-page__input--sign-in', 'Имя', 'Валера', 'text', false, false, 'sign-in-name')
+            +button(false, 'auth-page__btn auth-page__btn--sign-in', 'Зарегестрироваться', false, 'submit')

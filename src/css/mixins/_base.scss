@@ -13,6 +13,29 @@ $color_Concrete: #f2f2f2;
 $font_1: 'Brygada 1918';
 $font_2: 'Roboto', sans-serif;
 
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+$breakpoint_lil-screen: 900px;
+$breakpoint_tablet: 768px;
+$breakpoint_mobile: 425px;
+
+@mixin lil-screen {
+  @media (max-width: $breakpoint_lil-screen) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint_tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint_mobile) {
+    @content;
+  }
+}
+
 *,
 *::before,
 *::after{
@@ -71,6 +94,10 @@ li{
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+button{
+  border: 0 none;
 }
 
 
