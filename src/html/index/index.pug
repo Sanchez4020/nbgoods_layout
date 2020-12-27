@@ -1,0 +1,85 @@
+.index__content
+    section.index__sales
+        h1.index__sales-title Скидки до 50%
+        .index__sales-body
+            .index__sales-body-part
+                .promo-circle.hidden
+                +promoCircle('', '20%')
+                +promoCircle('', '30%')
+            .index__sales-body-part
+                +promoCircle('', '40%')
+                +promoCircle('', '50%')
+                .promo-circle.hidden
+        .index__sales-notification
+            p.index__sales-notification-text Зарегистрируйтесь и получите скидку до 50% на первый заказ
+            a(href='#').index__sales-notification-link.default-link Подробнее
+    section.index__banners
+
+    section.index__sec
+        h2.index__sec-title Популярные бренды
+        .index__sec-content.index__sec-content--brands
+            div
+                +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
+            div
+                +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
+            div
+                +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
+            div
+                +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
+            div
+                +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
+            div
+                +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
+            div
+                +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
+            div
+                +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
+            div
+                +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
+        +button(true, 'index__sec-btn', 'Посмотреть все')
+
+    section.index__sec
+        h2.index__sec-title Новинки
+        .index__sec-content.index__sec-content--products
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+        +button(true, 'index__sec-btn', 'Посмотреть еще')
+
+    section.index__sec
+        h2.index__sec-title Акции
+        .index__sec-content.index__sec-content--products
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+            div
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+        +button(true, 'index__sec-btn', 'Посмотреть еще')

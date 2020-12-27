@@ -62,8 +62,11 @@ main{
 .wrapper{
   //width: #{'min(100vw, 1440px)'}; // можко та, можно менять регистр, тк цссу пох, а сассу нет
   width: Min(100vw, 1440px);
-  padding: 0 40px 0 40px;
+  padding: 0 40px;
   margin: 0 auto;
+  @include tablet {
+    padding: 0 10px;
+  }
 }
 
 input[type=text],
@@ -100,5 +103,9 @@ button{
   border: 0 none;
 }
 
+
+h1,h2,h3,h4,h5,h6,p,a{
+  margin: 0;
+}
 
 

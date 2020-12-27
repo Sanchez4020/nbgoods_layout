@@ -4,6 +4,8 @@ header{
   background-color: white;
   z-index: 99;
   height: 134px;
+  width: 100vw;
+  overflow: hidden; // убрать, когда починю адаптив
 
   .header{
     display: flex;
@@ -29,10 +31,11 @@ header{
       position: relative;
       height: 34px;
       display: flex;
+      width: Min(526px, 38%);
       &-input{
         margin-top: auto;
         padding: 7px 15px;
-        width: 526px;
+        width: 100%;
         border: 0 none;
         border-bottom: 1px solid black;
         font-size: 16px;

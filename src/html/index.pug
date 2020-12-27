@@ -4,10 +4,15 @@ html(lang="ru")
         include mixin/meta
         title INDEX
         include mixin/styles
-    body
-        //include mixin/mixin
-        .wrapper
-            h1 hello world!!
-            .icon-search
-            .icon-dd-arrow
-    script(src="./js/main.min.js" defer)
+    body.index
+        include mixin/mixin
+        include header/header
+        main
+            .wrapper
+                include index/index
+        include footer/footer
+        include mixin/modals
+        include mixin/scripts
+    link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+    script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer)
+    script(src='/js/index.min.js')
