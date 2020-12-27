@@ -92,6 +92,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 60px;
+    position: relative;
 
     &-title{
       font-family: $font_1;
@@ -102,6 +103,33 @@
       letter-spacing: 0.03em;
       text-transform: capitalize;
       margin-bottom: 60px;
+    }
+
+    &-arrows{
+      display: flex;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 10px;
+
+      .prev-arrow{
+        transform: rotate(90deg);
+        color: $color_Silver;
+        transition: color .3s;
+        margin-right: 10px;
+        &:hover{
+          color: $color_Black;
+        }
+      }
+      .next-arrow{
+        transform: rotate(-90deg);
+        color: $color_Silver;
+        transition: color .3s;
+        &:hover{
+          color: $color_Black;
+        }
+      }
     }
 
     &-content{

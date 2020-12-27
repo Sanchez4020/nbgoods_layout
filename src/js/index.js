@@ -3,9 +3,10 @@
          infinite: true,
          slidesToShow: 6,
          slidesToScroll: 1,
-         arrows: false,
          autoplay: true,
          autoplaySpeed: 2000,
+         prevArrow: $('.prev-arrow--brand'),
+         nextArrow: $('.next-arrow--brand'),
          responsive: [
              {
                  breakpoint: 1440,
@@ -44,9 +45,10 @@
          infinite: true,
          slidesToShow: 4,
          slidesToScroll: 4,
-         arrows: false,
          autoplay: true,
-         autoplaySpeed: 2000,
+         autoplaySpeed: 3000,
+         prevArrow: $('.prev-arrow--new'),
+         nextArrow: $('.next-arrow--new'),
          responsive: [
              {
                  breakpoint: 1440,
@@ -70,5 +72,38 @@
                  }
              },
          ]
-     })
+     });
+
+     $('.index__sec-content--offers').slick({
+         infinite: true,
+         slidesToShow: 4,
+         slidesToScroll: 4,
+         autoplay: true,
+         autoplaySpeed: 3000,
+         prevArrow: $('.prev-arrow--offer'),
+         nextArrow: $('.next-arrow--offer'),
+         responsive: [
+             {
+                 breakpoint: 1440,
+                 settings: {
+                     slidesToShow: 3,
+                     slidesToScroll: 3
+                 }
+             },
+             {
+                 breakpoint: 1080,
+                 settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 2
+                 }
+             },
+             {
+                 breakpoint: 720,
+                 settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1
+                 }
+             },
+         ]
+     });
  })

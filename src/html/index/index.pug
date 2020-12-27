@@ -17,6 +17,9 @@
 
     section.index__sec
         h2.index__sec-title Популярные бренды
+        .index__sec-arrows
+            .prev-arrow.icon-dd-arrow.prev-arrow--brand
+            .next-arrow.icon-dd-arrow.next-arrow--brand
         .index__sec-content.index__sec-content--brands
             div
                 +promoCircle('index__sec-item index__sec-item--brand', '/images/brand-logo__fred-parry.svg', false, true)
@@ -40,6 +43,9 @@
 
     section.index__sec
         h2.index__sec-title Новинки
+        .index__sec-arrows
+            .prev-arrow.icon-dd-arrow.prev-arrow--new
+            .next-arrow.icon-dd-arrow.next-arrow--new
         .index__sec-content.index__sec-content--products
             div
                 +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
@@ -63,7 +69,10 @@
 
     section.index__sec
         h2.index__sec-title Акции
-        .index__sec-content.index__sec-content--products
+        .index__sec-arrows
+            .prev-arrow.icon-dd-arrow.prev-arrow--offer
+            .next-arrow.icon-dd-arrow.next-arrow--offer
+        .index__sec-content.index__sec-content--offers
             div
                 +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
                 +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
