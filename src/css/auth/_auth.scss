@@ -41,42 +41,35 @@
 
   &__switcher{
     display: none;
-    cursor: pointer;
     font-size: 28px;
     line-height: 34px;
     font-family: $font_1;
     .login-btn{
       text-decoration: underline;
+      cursor: default;
     }
     .sign-in-btn{
       text-decoration: none;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
     }
     &-separator{
       margin: 0 10px
-    }
-    &:hover{
-      .login-btn{
-        text-decoration: none;
-      }
-      .sign-in-btn{
-        text-decoration: underline;
-      }
     }
 
     &.active{
       .login-btn{
         text-decoration: none;
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
       }
       .sign-in-btn{
         text-decoration: underline;
-      }
-      &:hover{
-        .login-btn{
-          text-decoration: underline;
-        }
-        .sign-in-btn{
-          text-decoration: none;
-        }
+        cursor: default;
       }
     }
 

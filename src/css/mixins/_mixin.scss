@@ -67,6 +67,12 @@
     right: 15px;
     color: $color_GraySuit;
     cursor: pointer;
+    transition: color .3s;
+  }
+  &.show-password{
+    .input__icon{
+      color: $color_Black;
+    }
   }
   &--password{
     .input__item{

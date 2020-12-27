@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             inputItem = input.querySelector('input'),
             inputIcon = input.querySelector('.input__icon');
         inputIcon.addEventListener('click', ()=> {
+            input.classList.toggle('show-password');
             inputItem.type = inputItem.type === 'password' ? 'text': 'password';
         })
     });
