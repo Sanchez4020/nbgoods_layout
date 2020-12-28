@@ -1,0 +1,51 @@
+mixin filter(custom_class, category_1, sizes, category_2, brands, colors,  price, condition, offers)
+    aside.filter
+        h4.filter__title._js-filter-open Фильтр
+        .filter__close.icon-cross._js-filter-close
+        .filter__block
+            h5.filter__block-title Категория
+            .filter__block-content.filter__block-content--category-1
+                each item, index in category_1
+                    +checkbox('filter__block-item', item, 'category-1-'+index)
+        .filter__block
+            h5.filter__block-title Размер одежды
+            .filter__block-content.filter__block-content--sizes
+                each item, index in sizes
+                    +radioSize('filter__block-item', item, 'filter-size', 'size'+index)
+        .filter__block
+            h5.filter__block-title Категория
+            .filter__block-content.filter__block-content--category-2
+                each item, index in category_2
+                    +checkbox('filter__block-item', item, 'category-2-' + index)
+        .filter__block
+            h5.filter__block-title Бренды
+            +input('filter__block-input', false, '', 'text')
+            .filter__block-content.filter__block-content--brands.js-custom-scrollbar
+                each item, index in brands
+                    +checkbox('filter__block-item', item, 'brand-' + index)
+        .filter__block
+            h5.filter__block-title Цвета
+            .filter__block-content.filter__block-content--colors
+                each item, index in colors
+                    +radioColor('filter__block-item', item, 'filter-color', 'color-'+index, false)
+        .filter__block
+            h5.filter__block-title Цена
+            .filter__block-content.filter__block-content--price
+                .filter__price.filter__price--from
+                    +input('filter__price-input', false, '', 'text')
+                    .filter__price-default= price.min+' Руб'
+                .filter__price.filter__price--to
+                    +input('filter__price-input', false, '', 'text')
+                    .filter__price-default= price.max+' Руб'
+                +button(true, 'filter__price-submit', 'ОК')
+        .filter__block
+            h5.filter__block-title Состояние
+            .filter__block-content.filter__block-content--condition
+                each item, index in condition
+                    +checkbox('filter__block-item', item, 'condition-' + index)
+        .filter__block
+            h5.filter__block-title Скидка
+            .filter__block-content.filter__block-content--offers
+                each item, index in offers
+                    +checkbox('filter__block-item', item, 'offer-' + index)
+    script(src="js/filter.min.js" defer)

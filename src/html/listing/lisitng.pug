@@ -1,0 +1,41 @@
+- var breadCrumpsList = [{name:'Главная', link: '#'}, {name:'Мужская Одежда', link: '#'}]
+- var title = 'Мужчины'
+- var selectOptions = ['Популярость', 'Возрастание цены', 'Убывание цены', 'КРЫМ НАШ!!1']
+
+- var category_1 = ['Аксессуары', 'Сумки', 'Одежда', 'Обувь']
+- var sizes = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']
+- var category_2 = ['Пальто','Куртки','Джинсы','Трикотаж и кофты','Поло','Футболки','Рубашки','Шорты','Костюмы']
+- var brands = ['A Bathi ng Ape', 'APC', 'Acne Studios', 'Adidas', 'Nike', 'Alexander Mcqueen', 'Ami', 'A Bathi ng Ape', 'APC', 'Acne Studios', 'Adidas', 'Nike', 'Alexander Mcqueen', 'Ami', 'A Bathi ng Ape', 'APC', 'Acne Studios', 'Adidas', 'Nike', 'Alexander Mcqueen', 'Ami']
+- var colors = ['#DFC4A3', '#000000', '#68A0F2', '#A57738', '#A04551', '#C6975A', '#4E4E4E', '#F8F9EC', '#D5B766', '#89B379', '#DD5252', '#97A463', '#8DE4DD', '#FAEC67', '#325B8C', '#FFB449', '#FDC0D7', '#BF55BD', '#BF55BD', '#FFFFFF', 'gradient', 'transparent']
+- var price = {min: '120', max: '150 000'}
+- var condition = ['Никогда не носил, с биркой', 'Ни разу не надевал', 'Очень хорошее состояние', 'Хорошее состояние', 'Удволетворительный']
+- var offers = ['20%', '30%', '40%', '50%']
+
+include ../mixin/blocks/filter-block
+
+.listing-page__content
+    +breadCrumps('listing-page__bread-crumps', breadCrumpsList)
+    h1.listing-page__title= title
+    .listing-page__body
+        section.listing-page__filter
+            +filter('listing-page__filter-item', category_1, sizes, category_2, brands, colors, price, condition, offers)
+        section.listing-page__data
+            .listing-page__actions
+                .listing-page__actions-title Сортировать по
+                +select('listing-page__actions-sort', selectOptions)
+                .listing-page__actions-paginator.paginator
+            .listing-page__products
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('listing-page__products-item', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+
+

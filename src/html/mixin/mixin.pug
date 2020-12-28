@@ -19,7 +19,8 @@ mixin input(custom_class, title, placeholder, type, disabled, error, name)
         class= error ? 'error': '',
         class= type === 'password' ? 'input--password': ''
     )
-        .input__title= title
+        if (title)
+            .input__title= title
         input.input__item(
             placeholder= placeholder,
             disabled= disabled,
@@ -47,7 +48,7 @@ mixin defaultList(custom_class, inverted, listItems)
                     a(href= item.url)= item.name
 
 mixin select(custom_class, options)
-    .select
+    .select(class= custom_class)
         select.select__item
             each option in options
                 option.select__option= option
@@ -60,11 +61,21 @@ mixin radioColor(custom_class, color, name, id, checked)
             for= id,
             class='_js-'+name
         )
-            .radio-color__round(
-                style='background-color: '+color,
-                class= checked ? 'checked': '',
-                class= color === '#fff' ? 'white-color': ''
+            if (color === 'transparent')
+                .radio-color__round.white-color.transparent(
+                    style='background-color: '+color,
+                    class= checked ? 'checked': '',
                 )
+            else if(color === 'gradient')
+                .radio-color__round.gradient(
+                    class= checked ? 'checked' : '',
+                )
+            else
+                .radio-color__round(
+                    style='background-color: '+color,
+                    class= checked ? 'checked': '',
+                    class= color === '#FFFFFF' ? 'white-color': ''
+                    )
 
 mixin radioSize(custom_class, size, name, id, checked)
     .radio-size(class= custom_class)
@@ -125,3 +136,11 @@ mixin promoCircle(custom_class,content, link, img)
         else
             .promo-circle__content= content
         a.promo-circle__link(href= link ? link:'#')
+
+mixin breadCrumps(custom_class, items_list)
+    nav.bread-crumps(class= custom_class)
+        ul.bread-crumps__list
+            each item in items_list
+                li.bread-crumps__item
+                    .bread-crumps__icon.icon-dd-arrow
+                    a.bread-crumps__link(href=item.link)= item.name

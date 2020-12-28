@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initRadio('test-color');
     initRadio('test-size');
+    initRadio('filter-color');
+    initRadio('filter-size');
 
     const
             customNav = document.querySelectorAll('.custom-navigation'),

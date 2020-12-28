@@ -222,6 +222,7 @@
 
   &__label{
     cursor: pointer;
+    position: relative;
   }
 
   &__round{
@@ -239,6 +240,25 @@
       &.checked{
         border-width: 2px;
       }
+    }
+    &.transparent{
+      position: relative;
+      &:after{
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 1px;
+        background-color: $color_Black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+    &.gradient{
+      background-image: url("/images/color_gradient.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
   }
 }
@@ -575,5 +595,42 @@
     left: 0;
     opacity: 0;
     z-index: 9;
+  }
+}
+
+.bread-crumps{
+
+  &__list{
+    display: flex;
+  }
+
+  &__item{
+    padding-left: 18px;
+    position: relative;
+    &:first-child{
+      padding-left: 3px;
+      .bread-crumps__icon{
+        display: none;
+      }
+    }
+  }
+
+  &__icon{
+    position: absolute;
+    font-size: 5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    left: 6px;
+  }
+
+  &__link{
+    font-family: $font_2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: $color_Black;
   }
 }

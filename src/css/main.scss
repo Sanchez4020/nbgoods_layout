@@ -9,6 +9,7 @@
 @import "mixins/fonts";
 @import "mixins/mixin";
 @import "mixins/modals";
+@import "mixins/blocks/filter";
 
 @import "header/herder";
 @import "footer/footer";
@@ -18,3 +19,4 @@
 @import "uikit-page/uikit-page";
 @import "auth/auth";
 @import "index/index";
+@import "listing/listing";
