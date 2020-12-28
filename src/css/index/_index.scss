@@ -95,6 +95,8 @@
     margin-bottom: 63px;
     width: 100%;
     flex-wrap: wrap;
+    height: Min(770px, 97vw);
+    overflow: hidden;
     &-column{
       display: flex;
       flex-direction: column;
