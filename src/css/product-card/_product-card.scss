@@ -1,0 +1,233 @@
+.product-card{
+  &__content{
+    padding-top: 45px;
+  }
+
+  &__bread-crumps{
+    margin-bottom: 50px;
+  }
+
+  &__body{
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &-left{
+      width: Min(831px, 61%);
+    }
+
+    &-right{
+      width: Min(437px, 33%);
+    }
+
+
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 45px;
+    &-nav{
+      display: flex;
+      flex-direction: column;
+      max-height: 680px;
+      overflow: scroll;
+    }
+    &-btn{
+      display: flex;
+      width: 90px;
+      height: 111px;
+      margin-bottom: 31px;
+      cursor: pointer;
+    }
+    &-photo{
+      display: flex;
+      height: 680px;
+      width: 600px;
+      margin-left: auto;
+    }
+  }
+
+  &__buttons{
+    width: 600px;
+    display: flex;
+    margin-left: auto;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__comments{
+
+    &-title{
+      font-family: $font_1;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 34px;
+      text-transform: capitalize;
+      margin-bottom: 24px;
+    }
+
+    &-block{
+      border: 1px solid $color_Black;
+      border-radius: 5px;
+      height: 213px;
+      overflow: scroll;
+      padding: 23px 19px;
+      margin-bottom: 19px;
+
+      .comment-item{
+        display: flex;
+        margin-bottom: 15px;
+        &:last-child{
+          margin-bottom: 0;
+          .comment-item__content{
+            padding-bottom: 0;
+            border-bottom: 0 none;
+          }
+        }
+        &__img{
+          display: flex;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          margin-right: 16px;
+        }
+        &__content{
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 13px;
+          border-bottom: 1px solid $color_Black;
+          width: 100%;
+
+        }
+
+        &__name{
+          font-family: $font_2;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 16px;
+          margin-bottom: 10px;
+        }
+
+        &__text{
+          font-family: $font_2;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 16px;
+          margin-bottom: 12px;
+        }
+
+        &__date{
+          font-family: $font_2;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 16px;
+          color: $color_SilverChalice;
+
+        }
+      }
+    }
+
+    &-new{
+      display: flex;
+    }
+    &-avatar{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+    &-input{
+      width: 100%;
+      margin-right: 22px;
+      height: 48px;
+    }
+    &-btn{
+      font-size: 27px;
+      margin: auto 0;
+      cursor: pointer;
+      background-color: transparent;
+    }
+  }
+
+  &__sec{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    position: relative;
+
+    &-title{
+      font-family: $font_1;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 58px;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      margin-bottom: 60px;
+    }
+
+    &-arrows{
+      display: flex;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 10px;
+
+      .prev-arrow{
+        transform: rotate(90deg);
+        color: $color_Silver;
+        transition: color .3s;
+        margin-right: 10px;
+        &:hover{
+          color: $color_Black;
+        }
+      }
+      .next-arrow{
+        transform: rotate(-90deg);
+        color: $color_Silver;
+        transition: color .3s;
+        &:hover{
+          color: $color_Black;
+        }
+      }
+    }
+
+    &-content{
+      margin-bottom: 69px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media (max-width: 720px) {
+        div{
+          .index__sec-item{
+            &:nth-child(2){
+              display: none;
+            }
+          }
+        }
+      }
+
+    }
+
+    &-btn{
+      width: min-content;
+      white-space: nowrap;
+      margin: 0 auto;
+    }
+
+    &-item{
+      margin: 20px auto 5px;
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+}
