@@ -203,6 +203,7 @@
     border: 1px solid $color_Black;
     border-radius: 5px;
     padding: 8px 23px 8px 16px;
+    width: inherit;
   }
 
   &__icon{
@@ -603,6 +604,7 @@
 
   &__list{
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item{
