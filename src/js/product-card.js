@@ -30,4 +30,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    let isDesktop = null, activeScrollbar = null;
+    const
+        productPageCustomScroll = document.querySelector('.js-product-custom-scrollbar'),
+        initDesktop = () => {
+            activeScrollbar = OverlayScrollbars(productPageCustomScroll, {
+                overflowBehavior: {
+                    x: 'hidden',
+                    y: 'scroll',
+                },
+                scrollbars: {
+                    clickScrolling : true
+                }
+
+            });
+        },
+        initSlider = () => {
+            console.log(isDesktop);
+            if (document.documentElement.clientWidth > 768 && (!isDesktop || isDesktop === null)){
+                activeScrollbar ? activeScrollbar.destroy():'';
+                isDesktop = true;
+                initDesktop();
+            } else if (document.documentElement.clientWidth < 769 && (isDesktop || isDesktop === null)){
+                activeScrollbar ? activeScrollbar.destroy():'';
+                isDesktop = false;
+            }
+        };
+    initSlider();
+    window.addEventListener('resize', () => {
+        initSlider();
+    });
+
 });

@@ -52,7 +52,7 @@ mixin productInfo(info)
     section.product-card__body
         .product-card__body-left
             .product-card__item
-                .product-card__item-nav
+                .product-card__item-nav.js-product-custom-scrollbar
                     +productItems(productImages)
                 img.product-card__item-photo(src=productImages[0])
             .product-card__buttons
@@ -61,7 +61,7 @@ mixin productInfo(info)
                 +buttonCustomized('product-card__buttons-item', 'icon-share', 'Поделиться')
             .product-card__comments
                 h3.product-card__comments-title Коментарии
-                .product-card__comments-block
+                .product-card__comments-block.js-custom-scrollbar
                     +commentItems(commentsArr)
                 form.product-card__comments-new
                     img.product-card__comments-avatar(src='/images/user-1.jpg')

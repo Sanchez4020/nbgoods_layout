@@ -64,11 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     y: 'scroll'
                 },
                 scrollbars: {
-                    autoHide: "never"
+                    autoHide: "never",
+                    clickScrolling : true
                 }
             })
-        }
-    )
+        })
 
     $('.paginator').pagination({
         items: 20,
