@@ -1,0 +1,27 @@
+- var accountInfo = {name: 'Алексей', type:'Проверенный продавец', typeIcon: 'icon-tick', mail:'lexa@gmail.com', password:'123456', sex: 'Пансексуал'}
+- var tabsContent = ['Аккаунт', 'Продажи', 'Покупки']
+
+mixin accountTabs(tabs, dataInfo)
+    aside.account__tabs
+        each tab, i in tabs
+            .account__tabs-item(data-tab=dataInfo+i, class= i === 0 ? 'active': '')= tab
+
+.account__content
+    section.account__header
+        +userAvatar('account__header-avatar', '/images/user-1.jpg')
+        .account__header-info
+            .account__header-name= accountInfo.name
+            .account__header-type= accountInfo.type
+                .account__header-type-icon(class= accountInfo.typeIcon)
+    .account__body
+        +accountTabs(tabsContent, 'account__main--')
+        section.account__main.account__main--0(style='display: none;')
+            form.account__main-form
+                .account__main-group
+                    +input('account__main-input', 'email', 'Ваш email', 'email', false, false, 'email', accountInfo.mail, true)
+                    +input('account__main-input', 'имя', 'Ваше имя', 'text', false, false, 'name', accountInfo.name, true)
+                    +input('account__main-input', 'проль', 'Ваш пароль', 'password', false, false, 'name', accountInfo.password, true)
+                    +input('account__main-input', 'пол', 'Как Вы себя определяете?', 'text', false, false, 'name', accountInfo.sex, true)
+                +button(false, 'account__main-submit', 'Изменить', false, 'submit')
+        section.account__main.account__main--1(style='display: block;')
+            .account__main-sales

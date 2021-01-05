@@ -1,0 +1,117 @@
+.account{
+  &__content{
+    padding-top: 90px;
+  }
+
+  &__header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $color_Black;
+    margin-bottom: 35px;
+
+    &-avatar{
+      margin-right: 16px;
+    }
+
+    &-info{
+      display: flex;
+      flex-direction: column;
+      height: 74px;
+      justify-content: center;
+    }
+
+    &-name{
+      font-family: $font_1;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+
+    &-type{
+      font-family: $font_2;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      position: relative;
+      padding-right: 26px;
+      &-icon{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+  }
+
+  &__body{
+    display: flex;
+    @include tablet{
+      flex-direction: column;
+    }
+  }
+
+  &__tabs{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    min-width: 230px;
+    &-item{
+      font-family: $font_2;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 14px;
+      cursor: pointer;
+      transition: font-weight .3s;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &:hover,
+      &.active{
+        font-weight: bold;
+      }
+    }
+    @include tablet{
+      flex-direction: row;
+      width: 100%;
+      margin-bottom: 30px;
+      &-item{
+        margin-bottom: 0;
+        margin-right: 14px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__main{
+    width: 100%;
+
+    &-group{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1033px;
+      margin-bottom: 15px;
+
+    }
+
+    &-input{
+      width: Min(437px, 100%);
+      margin:0 10px 15px 0;
+
+      @media (max-width: 1203px) {
+        width: 100%;
+      }
+    }
+  }
+
+}

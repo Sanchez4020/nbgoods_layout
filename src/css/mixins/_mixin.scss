@@ -89,6 +89,18 @@
       color: $color_Red;
     }
   }
+
+  &--light{
+    .input__item{
+      border-radius: 0;
+      border: 0 none;
+      border-top: 1px solid $color_Black;
+      transition: .3s;
+      &:focus{
+        box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+      }
+    }
+  }
 }
 
 .checkbox{
