@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+    head
+        include mixin/meta
+        title CART PAGE
+        include mixin/styles
+    body.cart
+        include mixin/mixin
+        include header/header
+        main
+            .wrapper
+                include cart/cart
+        include footer/footer
+        include mixin/modals
+        include mixin/scripts
+        script(src="/js/cart.min.js" defer)

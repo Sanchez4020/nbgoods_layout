@@ -662,6 +662,12 @@
   font-weight: 400;
   font-style: normal;
   font-family: $font_2;
+  position: relative;
+  &--cart{
+    border-bottom: 0 none;
+    border-top: 1px solid $color_Black;
+    padding-right: 50px;
+  }
 
   &__image{
     display: flex;
@@ -710,5 +716,37 @@
     &-name{
       font-weight: bold;
     }
+  }
+
+  &__seller{
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px 15px;
+
+    &-image{
+      height: 42px;
+      width: 42px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+
+    &-type{
+      position: relative;
+      padding-right: 25px;
+      white-space: nowrap;
+      &-icon{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__remove{
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    cursor: pointer;
   }
 }
