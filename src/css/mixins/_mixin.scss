@@ -649,3 +649,66 @@
     color: $color_Black;
   }
 }
+
+.listing-inline-item{
+  padding: 15px 25px;
+  border-bottom: 1px solid $color_Black;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: $font_2;
+
+  &__image{
+    display: flex;
+    height: 146px;
+    width: 146px;
+    margin-right: 60px;
+    margin-bottom: 15px;
+  }
+
+  &__desc{
+    display: flex;
+    flex-direction: column;
+    //margin-right: 184px;
+    margin: 0 15px 15px;
+    &-brand{
+      font-weight: bold;
+    }
+    &-price{
+      &-value{
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__transaction{
+    //margin-right: 219px;
+    margin: 0 15px 15px;
+  }
+
+  &__user{
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px 15px;
+
+    &-type{
+      margin-bottom: 5px;
+    }
+
+    &-image{
+      height: 42px;
+      width: 42px;
+      border-radius: 50%;
+      margin-bottom: 5px;
+    }
+
+    &-name{
+      font-weight: bold;
+    }
+  }
+}

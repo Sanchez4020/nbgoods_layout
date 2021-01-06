@@ -1,6 +1,18 @@
 - var accountInfo = {name: 'Алексей', type:'Проверенный продавец', typeIcon: 'icon-tick', mail:'lexa@gmail.com', password:'123456', sex: 'Пансексуал'}
 - var tabsContent = ['Аккаунт', 'Продажи', 'Покупки']
 
+- var item_1_desc = {image:'/images/product_1.jpg', brand: 'Prada', condition: 'Отличное', size: 'L', color: 'Черный', price: '9 800 ₽'}
+- var item_1_seller = {image:'/images/user-2.jpg', name:'Валерка', type: 'Проверенный продавец', icon: 'icon-check', sold: '14'}
+- var item_1_transaction = {date: '23.02.2020', delivery: 'Travel', payment: 'Visa'}
+- var item_1_buyer = {image: '/images/user-1.jpg', name: 'Юрец'}
+- var item_1 = {desc: item_1_desc, seller: item_1_seller, transaction: item_1_transaction, buyer: item_1_buyer}
+
+- var item_2_desc = {image:'/images/product_2.jpg', brand: 'Moncler', condition: 'Хорошее', size: 'XL', color: 'Черный', price: '7 500 ₽'}
+- var item_2_seller = {image:'/images/user-1.jpg', name:'Юрец', type: 'Проверенный продавец', icon: 'icon-check', sold: '5'}
+- var item_2_transaction = {date: '23.02.2020', delivery: 'Travel', payment: 'Visa'}
+- var item_2_buyer = {image: '/images/user-2.jpg', name: 'Валерка'}
+- var item_2 = {desc: item_2_desc, seller: item_2_seller, transaction: item_2_transaction, buyer: item_2_buyer}
+
 mixin accountTabs(tabs, dataInfo)
     aside.account__tabs
         each tab, i in tabs
@@ -15,7 +27,7 @@ mixin accountTabs(tabs, dataInfo)
                 .account__header-type-icon(class= accountInfo.typeIcon)
     .account__body
         +accountTabs(tabsContent, 'account__main--')
-        section.account__main.account__main--0(style='display: none;')
+        section.account__main.account__main--0(style='display: block;')
             form.account__main-form
                 .account__main-group
                     +input('account__main-input', 'email', 'Ваш email', 'email', false, false, 'email', accountInfo.mail, true)
@@ -23,5 +35,15 @@ mixin accountTabs(tabs, dataInfo)
                     +input('account__main-input', 'проль', 'Ваш пароль', 'password', false, false, 'name', accountInfo.password, true)
                     +input('account__main-input', 'пол', 'Как Вы себя определяете?', 'text', false, false, 'name', accountInfo.sex, true)
                 +button(false, 'account__main-submit', 'Изменить', false, 'submit')
-        section.account__main.account__main--1(style='display: block;')
+        section.account__main.account__main--1(style='display: none;')
             .account__main-sales
+                +listingItemInline('account__main-sales-item', item_1, false, true)
+                +listingItemInline('account__main-sales-item', item_2, false, true)
+                +listingItemInline('account__main-sales-item', item_1, false, true)
+                +listingItemInline('account__main-sales-item', item_2, false, true)
+        section.account__main.account__main--2(style='display: none;')
+            .account__main-sales
+                +listingItemInline('account__main-sales-item', item_2)
+                +listingItemInline('account__main-sales-item', item_1)
+                +listingItemInline('account__main-sales-item', item_2)
+                +listingItemInline('account__main-sales-item', item_1)

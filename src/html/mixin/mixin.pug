@@ -156,7 +156,8 @@ mixin listingItemInline(custom_class, item_info, is_cart, is_sales)
             .listing-inline-item__desc-condition= 'Состояние: '+item_info.desc.condition
             .listing-inline-item__desc-size= 'Размер: '+item_info.desc.size
             .listing-inline-item__desc-color= 'Цвет: '+item_info.desc.color
-            .listing-inline-item__desc-price= 'Цена: '+item_info.desc.price
+            .listing-inline-item__desc-price= 'Цена: '
+                span.listing-inline-item__desc-price-value= item_info.desc.price
         if(is_cart)
             .listing-inline-item__seller
                 img.listing-inline-item__seller-image(src=item_info.seller.image)
@@ -164,7 +165,7 @@ mixin listingItemInline(custom_class, item_info, is_cart, is_sales)
                 .listing-inline-item__seller-type= item_info.seller.type
                     div(class=item_info.seller.icon)
                 if(item_info.seller.sold)
-                .listing-inline-item__seller-sold= 'Продано товаров: '+item_info.seller.sold
+                    .listing-inline-item__seller-sold= 'Продано товаров: '+item_info.seller.sold
             .listing-inline-item__remove.icon-cross
         else
             .listing-inline-item__transaction

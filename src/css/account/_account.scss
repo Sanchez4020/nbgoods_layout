@@ -1,6 +1,7 @@
 .account{
   &__content{
     padding-top: 90px;
+    padding-bottom: 120px;
   }
 
   &__header{
@@ -111,6 +112,10 @@
       @media (max-width: 1203px) {
         width: 100%;
       }
+    }
+    &-sales,
+    &-form{
+      width: 100%;
     }
   }
 
