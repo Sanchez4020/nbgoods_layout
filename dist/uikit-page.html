@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <!--// work-sans-300 - latin-->
+    <!--link(rel="preload" href="fonts/WorkSans/work-sans-v3-latin-300.woff2" as="font" type="font/woff2" crossorigin="anonymous")-->
+    <!--link(rel="preload" href="fonts/WorkSans/work-sans-v3-latin-300.woff" as="font" type="font/woff" crossorigin="anonymous")-->
+    <!--link(rel="preload" href="fonts/WorkSans/work-sans-v3-latin-300.ttf" as="font" type="font/ttf" crossorigin="anonymous")-->
+    <!--link(rel="preload" href="fonts/WorkSans/work-sans-v3-latin-300.svg#WorkSans" as="font" crossorigin="anonymous")-->
+    <title>UIKIT PAGE</title>
+    <!--link(rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png")-->
+    <!--link(rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png")-->
+    <!--link(rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png")-->
+    <!--link( rel="manifest" href="./images/favicon/manifest.json")-->
+    <!--link(rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#746bfc")-->
+    <link href="./css/main.min.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+  </head>
+  <body class="uikit-page">
+    <header>
+      <div class="wrapper">
+        <div class="header">
+          <div class="header__row">
+            <div class="header__logo">NotBadGoods</div>
+            <div class="header__search">
+              <input class="header__search-input" type="text" placeholder="Искать">
+              <div class="header__search-icon icon-search"></div>
+            </div>
+            <div class="header__actions">
+              <div class="header__actions-item icon-cart"></div>
+              <div class="header__actions-item icon-fav"></div>
+              <div class="header__actions-item icon-user"></div>
+            </div>
+          </div>
+          <div class="header__row">
+            <div class="header__categories">
+              <div class="header__link link">Мужское</div>
+              <div class="header__link link">Женское</div>
+              <div class="header__link link">Детское</div>
+              <div class="header__link link">Новые Поступления</div>
+              <div class="header__link link">Бренды</div>
+              <div class="header__link link">Обувь</div>
+              <div class="header__link link">Аксессуары</div>
+              <div class="header__link link">Бижутерия</div>
+              <div class="header__link link">SALE</div>
+              <div class="header__submenu">
+                <div class="wrapper">
+                  <div class="header__submenu-content">
+                        <div class="default-list header__submenu-item">
+                          <h6 class="default-list__title">Одежда</h6>
+                          <ul>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                          </ul>
+                        </div>
+                        <div class="default-list header__submenu-item">
+                          <h6 class="default-list__title">Одежда</h6>
+                          <ul>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                          </ul>
+                        </div>
+                        <div class="default-list header__submenu-item">
+                          <h6 class="default-list__title">Одежда</h6>
+                          <ul>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                          </ul>
+                        </div>
+                        <div class="default-list header__submenu-item">
+                          <h6 class="default-list__title">Одежда</h6>
+                          <ul>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                            <li class="link default-list__link"><a>Одежда</a></li>
+                          </ul>
+                        </div>
+                    <div class="close-btn icon icon-cross"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                <div class="button header__sale-button">Продать товар</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="uikit-page__content">
+          <div class="uikit-page__row">
+            <div class="uikit-page__column">
+                  <div class="button uikit-page__button">default</div>
+                  <div class="button uikit-page__button clicked">clicked</div>
+                  <div class="button uikit-page__button disabled">deisabled</div>
+            </div>
+            <div class="uikit-page__column">
+                  <div class="button button--transparent uikit-page__button">default</div>
+                  <div class="button button--transparent uikit-page__button clicked">clicked</div>
+                  <div class="button button--transparent uikit-page__button disabled">deisabled</div>
+            </div>
+            <div class="uikit-page__column">
+                  <div class="input uikit-page__input">
+                    <div class="input__title">email</div>
+                    <input class="input__item" placeholder="example@gmail.com" type="email">
+                  </div>
+                  <div class="input uikit-page__input input--password">
+                    <div class="input__title">enter ur password</div>
+                    <input class="input__item" placeholder="password" type="password">
+                    <div class="input__icon icon-eye"></div>
+                  </div>
+                  <div class="input uikit-page__input input--password">
+                    <div class="input__title">enter ur password</div>
+                    <input class="input__item" placeholder="password" disabled type="password">
+                    <div class="input__icon icon-eye"></div>
+                  </div>
+            </div>
+            <div class="uikit-page__column">
+                  <div class="input uikit-page__input error">
+                    <div class="input__title">email</div>
+                    <input class="input__item" placeholder="example@gmail.com" type="text">
+                  </div>
+                  <div class="input uikit-page__input error input--password">
+                    <div class="input__title">enter ur password</div>
+                    <input class="input__item" placeholder="password" type="password">
+                    <div class="input__icon icon-eye"></div>
+                  </div>
+            </div>
+            <div class="uikit-page__column">
+                  <div class="checkbox uikit-page__checkbox">
+                    <input class="checkbox__input" type="checkbox" id="uikit-checkbox-1" hidden>
+                    <label class="checkbox__label" for="uikit-checkbox-1">r u gay?
+                      <div class="icon-check"></div>
+                    </label>
+                  </div>
+                  <div class="checkbox uikit-page__checkbox">
+                    <input class="checkbox__input" type="checkbox" id="uikit-checkbox-2" hidden checked>
+                    <label class="checkbox__label checked" for="uikit-checkbox-2">r u slave?
+                      <div class="icon-check"></div>
+                    </label>
+                  </div>
+                  <div class="select uikit-page__select">
+                    <select class="select__item">
+                      <option class="select__option">Популярость</option>
+                      <option class="select__option">Возрастание цены</option>
+                      <option class="select__option">Убывание цены</option>
+                      <option class="select__option">КРЫМ НАШ!!1</option>
+                    </select>
+                    <div class="select__icon icon-dd-arrow"></div>
+                  </div>
+            </div>
+            <div class="uikit-page__column">
+              <div class="uikit-page__link link">Мужское</div>
+              <div class="uikit-page__link link active">Женское</div>
+                  <div class="radio-color uikit-page__radio">
+                    <input class="radio-color__input" type="radio" id="color1" name="test-color" checked>
+                    <label class="radio-color__label _js-test-color" for="color1">
+                      <div class="radio-color__round checked" style="background-color: #aaa"></div>
+                    </label>
+                  </div>
+                  <div class="radio-color uikit-page__radio">
+                    <input class="radio-color__input" type="radio" id="color2" name="test-color">
+                    <label class="radio-color__label _js-test-color" for="color2">
+                      <div class="radio-color__round" style="background-color: #ea1313"></div>
+                    </label>
+                  </div>
+                  <div class="radio-color uikit-page__radio">
+                    <input class="radio-color__input" type="radio" id="color3" name="test-color">
+                    <label class="radio-color__label _js-test-color" for="color3">
+                      <div class="radio-color__round" style="background-color: #fff"></div>
+                    </label>
+                  </div>
+                  <div class="radio-size uikit-page__radio">
+                    <input class="radio-size__input" type="radio" id="size1" name="test-size" checked>
+                    <label class="radio-size__label _js-test-size" for="size1">
+                      <div class="radio-size__item checked">l</div>
+                    </label>
+                  </div>
+                  <div class="radio-size uikit-page__radio">
+                    <input class="radio-size__input" type="radio" id="size2" name="test-size">
+                    <label class="radio-size__label _js-test-size" for="size2">
+                      <div class="radio-size__item">xl</div>
+                    </label>
+                  </div>
+            </div>
+            <div class="uikit-page__column">
+                  <div class="button-customized uikit-page__customized-btn">
+                    <div class="button-customized__icon icon-fav"></div>
+                    <div class="button-customized__text">Нравится</div>
+                    <div class="button-customized__counter">3</div>
+                  </div>
+                  <div class="button-customized uikit-page__customized-btn">
+                    <div class="button-customized__icon icon-message"></div>
+                    <div class="button-customized__text">Коментарии</div>
+                    <div class="button-customized__counter">2</div>
+                  </div>
+                  <div class="button-customized uikit-page__customized-btn">
+                    <div class="button-customized__icon icon-share"></div>
+                    <div class="button-customized__text">Поделиться</div>
+                  </div>
+            </div>
+            <div class="uikit-page__column">
+                  <div class="listing-item uikit-page__listing-item">
+                    <div class="listing-item__header">
+                      <div class="listing-item__status">Экспертный продавец
+                        <div class="listing-item__status-icon icon-medal"></div>
+                      </div>
+                      <div class="listing-item__likes">
+                        <div class="listing-item__likes-count">5</div>
+                        <div class="listing-item__likes-icon icon-fav"></div>
+                      </div>
+                    </div><img class="listing-item__image" src="/images/product_1.jpg">
+                    <div class="listing-item__brand link">Burberry</div>
+                    <div class="listing-item__type link">Coat</div>
+                    <div class="listing-item__desc listing-item__size">Размер: XL</div>
+                    <div class="listing-item__desc listing-item__delivery">Прямая доставка</div>
+                    <div class="listing-item__desc listing-item__price">12 345 ₽</div>
+                  </div>
+                  <div class="listing-item uikit-page__listing-item">
+                    <div class="listing-item__header">
+                      <div class="listing-item__status">Экспертный продавец
+                        <div class="listing-item__status-icon icon-tick"></div>
+                      </div>
+                      <div class="listing-item__likes">
+                        <div class="listing-item__likes-count">0</div>
+                        <div class="listing-item__likes-icon icon-fav"></div>
+                      </div>
+                    </div><img class="listing-item__image" src="/images/product_2.jpg">
+                    <div class="listing-item__brand link">Burberry</div>
+                    <div class="listing-item__type link">Coat</div>
+                    <div class="listing-item__desc listing-item__size">Размер: L</div>
+                    <div class="listing-item__desc listing-item__delivery">Прямая доставка</div>
+                    <div class="listing-item__desc listing-item__price">3 456 ₽</div>
+                  </div>
+            </div>
+            <div class="uikit-page__column">
+                  <div class="custom-navigation uikit-page__custom-nav">
+                    <div class="custom-navigation__item active">
+                      <div class="custom-navigation__count">1</div>
+                      <div class="custom-navigation__name">Адрес Доставки</div>
+                    </div>
+                    <div class="custom-navigation__item">
+                      <div class="custom-navigation__count">2</div>
+                      <div class="custom-navigation__name">Доставка</div>
+                    </div>
+                    <div class="custom-navigation__item">
+                      <div class="custom-navigation__count">3</div>
+                      <div class="custom-navigation__name">Оплата</div>
+                    </div>
+                  </div>
+                  <div class="custom-navigation uikit-page__custom-nav custom-navigation--vertical">
+                    <div class="custom-navigation__item active">
+                      <div class="custom-navigation__count">1</div>
+                      <div class="custom-navigation__name">Адрес Доставки</div>
+                    </div>
+                    <div class="custom-navigation__item">
+                      <div class="custom-navigation__count">2</div>
+                      <div class="custom-navigation__name">Доставка</div>
+                    </div>
+                    <div class="custom-navigation__item">
+                      <div class="custom-navigation__count">3</div>
+                      <div class="custom-navigation__name">Оплата</div>
+                    </div>
+                  </div>
+            </div>
+            <div class="uikit-page__column">
+              <div class="uikit-page__tooltip tooltip-parent">Hover on me
+                    <div class="tooltip">
+                      <div class="tooltip__item">This is tooltip</div>
+                    </div>
+              </div>
+              <div class="uikit-page__open-modal link open-modal" target-id="test-modal">Click on me</div>
+              <div class="uikit-page__link link" onclick="toastr.warning(&quot;Be carefull!!&quot;)">Click ot show waraning</div>
+              <div class="uikit-page__link link" onclick="toastr.success(&quot;You are breathtaking!!&quot;)">Click ot show success</div>
+              <div class="uikit-page__link link" onclick="toastr.error(&quot;SCREW U MADAFAKA!!!11&quot;)">Click ot show error</div>
+            </div>
+            <div class="uikit-page__column">
+              <div class="uikit-page__lisitng-block js-custom-scrollbar">
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-3" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-3">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-4" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-4">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-5" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-5">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-6" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-6">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-7" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-7">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-8" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-8">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-9" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-9">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-10" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-10">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-11" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-11">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-12" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-12">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-13" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-13">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-14" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-14">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox uikit-page__checkbox">
+                      <input class="checkbox__input" type="checkbox" id="uikit-checkbox-15" hidden checked>
+                      <label class="checkbox__label checked" for="uikit-checkbox-15">choose me!
+                        <div class="icon-check"></div>
+                      </label>
+                    </div>
+              </div>
+            </div>
+            <div class="uikit-page__column">
+              <div class="uikit-page__paginator paginator"></div>
+                  <div class="user-avatar uikit-page__avatar"><img class="user-avatar__img" src="/images/user-1.jpg">
+                    <div class="user-avatar__overlay"></div>
+                    <div class="user-avatar__btn">Изменить</div>
+                  </div>
+            </div>
+            <div class="uikit-page__column">
+                  <div class="promo-circle uikit-page__circle promo-circle--image"><img class="promo-circle__content" src="/images/brand-logo__fred-parry.svg"><a class="promo-circle__link" href="#"></a>
+                  </div>
+                  <div class="promo-circle uikit-page__circle">
+                    <div class="promo-circle__content">99%</div><a class="promo-circle__link" href="#"></a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <div class="footer">
+          <div class="footer__row footer__row--first">
+            <div class="footer__title">Second Hand Online</div>
+            <div class="footer__copyright">&copy; 2020-2021</div><a class="footer__app footer__app--google" href="#"></a><a class="footer__app footer__app--apple" href="#"></a>
+          </div>
+          <div class="footer__row">
+                <div class="default-list footer__row-item default-list--inverted">
+                  <h6 class="default-list__title">Покупка</h6>
+                  <ul>
+                    <li class="link default-list__link"><a>Отслеживание заказа</a></li>
+                    <li class="link default-list__link"><a>Гарантия подлинности</a></li>
+                    <li class="link default-list__link"><a>Возврат</a></li>
+                    <li class="link default-list__link"><a>Оплата</a></li>
+                    <li class="link default-list__link"><a>Доставка</a></li>
+                  </ul>
+                </div>
+          </div>
+          <div class="footer__row">
+                <div class="default-list footer__row-item default-list--inverted">
+                  <h6 class="default-list__title">Продажа</h6>
+                  <ul>
+                    <li class="link default-list__link"><a>Правила поддержки</a></li>
+                    <li class="link default-list__link"><a>Как продать?</a></li>
+                    <li class="link default-list__link"><a>Контакты</a></li>
+                  </ul>
+                </div>
+          </div>
+          <div class="footer__row">
+                <div class="default-list footer__row-item default-list--inverted">
+                  <h6 class="default-list__title">Помощь</h6>
+                  <ul>
+                    <li class="link default-list__link"><a>FAQ</a></li>
+                    <li class="link default-list__link"><a>Публичная оферта</a></li>
+                    <li class="link default-list__link"><a>Пользовательское соглашение</a></li>
+                    <li class="link default-list__link"><a>Партнерская программа</a></li>
+                    <li class="link default-list__link"><a>Политика конфиденциальности</a></li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-overlay"></div>
+    <div class="modal" modal-id="test-modal">
+      <div class="modal__close close-modal icon-cross"></div>
+      <h3 class="modal__title">This is test modal</h3>
+      <div class="modal__content">
+        <p>We can put here anything we gonna need</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur assumenda consectetur dignissimos doloremque dolorum enim fugiat illum incidunt maxime minima, nemo quibusdam quidem quisquam quo quod rerum sed voluptatem!</p><img src="/images/product_1.jpg">
+      </div>
+      <div class="modal__controls">
+            <div class="button modal__button close-modal">Confirm</div>
+            <div class="button button--transparent modal__button close-modal">Cancel</div>
+      </div>
+    </div>
+    <script src="js/libs/jquery.min.js" defer></script>
+    <script src="js/main.min.js" defer></script>
+    <script src="js/header.min.js" defer></script>
+    <script src="js/modals.min.js" defer></script>
+    <script src="js/libs/toastr.min.js" defer></script>
+    <script src="/js/libs/overlayScrollbars.min.js" defer></script>
+    <script src="/js/libs/paginator.min.js" defer></script>
+  </body>
+</html>
