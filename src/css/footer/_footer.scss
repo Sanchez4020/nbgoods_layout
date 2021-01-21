@@ -53,11 +53,11 @@ footer{
       background-position: center;
       background-repeat: no-repeat;
       &--google{
-        background-image: url('/images/google.png');
+        background-image: url('../images/google.png');
         margin-bottom: 9px;
       }
       &--apple{
-        background-image: url("/images/apple.png");
+        background-image: url("../images/apple.png");
       }
     }
   }

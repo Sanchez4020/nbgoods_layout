@@ -1,6 +1,6 @@
 - var breadCrumpsList = [{name:'Главная', link: '#'}, {name:'Трансгендерная Одежда', link: '#'}, {name:'Пальто', link: '#'}]
-- var productImages = ['/images/product_preview_1.png', '/images/product_preview_2.png', '/images/product_preview_3.png', '/images/product_preview_4.png', '/images/product_preview_1.png', '/images/product_preview_2.png']
-- var commentsArr = [{img:'/images/user-1.jpg', name: 'Васыль', text: 'Это паль? Скидку даете?', date: '20.04.20 в 04:20'}, {img:'/images/user-2.jpg', name: 'Валерка', text: 'Оригинал, мамой клянусь! скидку дам 600 рублей и ни копейки больше!', date: '20.04.20 в 16:20'}, {img:'/images/user-1.jpg', name: 'Васыль', text: 'Кайфы, куплю сыну!', date: '20.04.20 в 14:88'}]
+- var productImages = ['images/product_preview_1.png', 'images/product_preview_2.png', 'images/product_preview_3.png', 'images/product_preview_4.png', 'images/product_preview_1.png', 'images/product_preview_2.png']
+- var commentsArr = [{img:'images/user-1.jpg', name: 'Васыль', text: 'Это паль? Скидку даете?', date: '20.04.20 в 04:20'}, {img:'images/user-2.jpg', name: 'Валерка', text: 'Оригинал, мамой клянусь! скидку дам 600 рублей и ни копейки больше!', date: '20.04.20 в 16:20'}, {img:'images/user-1.jpg', name: 'Васыль', text: 'Кайфы, куплю сыну!', date: '20.04.20 в 14:88'}]
 - var productDesc = [{name: 'Бюст', size: '38'}, {name: 'Талия', size: '45'}, {name: 'Плечо', size: '18,5'}, {name: 'Длина', size: '49,5'}, {name: 'Рукав', size: '31'}]
 - var product = {name: 'Louis Vuitton', type: 'Шерстяное Пальто', price: '34 000', condition: 'Отличное. Нет видимых признаков износа.', descList: productDesc, descText: 'Ткань: 100% шерсть; Комбинированная 100% вискоза; Combo 2 100% полиэстер; Combo 3 53% ацетат, 47% вискоза; Combo 4 93% шерсть, 7% вискоза; Combo 5 100% полиамид.', sellersNote:'Плащ с длинными рукавами коричневого цвета с логотипом Louis Vuitton ™. Пуговицы спереди. Два кармана для укладки. Флуо черные струны.'}
 
@@ -64,7 +64,7 @@ mixin productInfo(info)
                 .product-card__comments-block.js-custom-scrollbar
                     +commentItems(commentsArr)
                 form.product-card__comments-new
-                    img.product-card__comments-avatar(src='/images/user-1.jpg')
+                    img.product-card__comments-avatar(src='images/user-1.jpg')
                     +input('product-card__comments-input', false, 'Написать комментарий...', 'text')
                     button.product-card__comments-btn.icon-triangle-arrow(type='submit')
         +productInfo(product)
@@ -76,21 +76,21 @@ mixin productInfo(info)
             .next-arrow.icon-dd-arrow.next-arrow--might-like
         .product-card__sec-content.product-card__sec-content--might-like
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
 
     section.product-card__sec
         h2.product-card__sec-title Вы недавно смотрели
@@ -99,21 +99,21 @@ mixin productInfo(info)
             .next-arrow.icon-dd-arrow.next-arrow--recently-watched
         .product-card__sec-content.product-card__sec-content--recently-watched
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
 
     section.product-card__sec
         h2.product-card__sec-title Похожие товары
@@ -122,18 +122,18 @@ mixin productInfo(info)
             .next-arrow.icon-dd-arrow.next-arrow--similar
         .product-card__sec-content.product-card__sec-content--similar
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, '/images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-medal', 5, 'images/product_1.jpg', 'Burberry', 'Coat', 'XL', 'Прямая доставка', '12 345')
             div
-                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, '/images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')
+                +listingItem('index__sec-item index__sec-item--product', 'Экспертный продавец', 'icon-tick', 0, 'images/product_2.jpg', 'Burberry', 'Coat', 'L', 'Прямая доставка', '3 456')

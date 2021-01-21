@@ -1,27 +1,27 @@
 @font-face {
   font-family: 'Brygada 1918';
-  src: url('/fonts/brygada/Brygada1918-Regular.eot');
+  src: url('../fonts/brygada/Brygada1918-Regular.eot');
   src:
-  url('/fonts/brygada/Brygada1918-Regular.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/brygada/Brygada1918-Regular.woff2') format('woff2'),
-  url('/fonts/brygada/Brygada1918-Regular.woff') format('woff'),
-  url('/fonts/brygada/Brygada1918-Regular.ttf') format('truetype');
+  url('../fonts/brygada/Brygada1918-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/brygada/Brygada1918-Regular.woff2') format('woff2'),
+  url('../fonts/brygada/Brygada1918-Regular.woff') format('woff'),
+  url('../fonts/brygada/Brygada1918-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Brygada 1918';
-  src: url('/fonts/brygada/Brygada1918-Bold.otf');
-  src: url('/fonts/brygada/Brygada1918-Bold.otf') format('otf');
+  src: url('../fonts/brygada/Brygada1918-Bold.otf');
+  src: url('../fonts/brygada/Brygada1918-Bold.otf') format('otf');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Helvetica Nue';
-  src: url('/fonts/helvetica/HelveticaNeue.ttf');
-  src: url('/fonts/helvetica/HelveticaNeue.ttf')  format('truetype');
+  src: url('../fonts/helvetica/HelveticaNeue.ttf');
+  src: url('../fonts/helvetica/HelveticaNeue.ttf')  format('truetype');
   font-weight: normal;
   font-style: normal;
 }

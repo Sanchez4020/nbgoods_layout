@@ -74,4 +74,6 @@ gulp.task('remove-dist', (done) => {
     done();
 })
 
-gulp.task('default', gulp.series("remove-dist", "sass", "pug", "js", "images", "fonts", "serve"));
+gulp.task('dist', gulp.series("remove-dist", "sass", "pug", "js", "images", "fonts"))
+
+gulp.task('default', gulp.series("dist", "serve"));

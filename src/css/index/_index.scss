@@ -110,20 +110,20 @@
       &--1{
         width: Min(783px, 98vw);
         height: Min(770px, 97vw);
-        background-image: url("/images/banner-1.png");
+        background-image: url("../images/banner-1.png");
         margin-bottom: 10px;
       }
 
       &--2{
         width: Min(550px, 98vw);
         height: Min(375px, 66vw);
-        background-image: url("/images/banner-2.png");
+        background-image: url("../images/banner-2.png");
       }
 
       &--3{
         width: Min(550px, 98vw);
         height: Min(375px, 66vw);
-        background-image: url("/images/banner-3.png");
+        background-image: url("../images/banner-3.png");
       }
     }
   }
